@@ -1,0 +1,24 @@
+<div class="timeline">
+    <div *ngFor='let entry of array;let i = index'>
+      <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+        <div class="content">
+          <h2>{{entry.year}}</h2>
+          <p>{{entry.org}}</p>
+          <p>{{entry.role}}</p>
+          <p>{{entry.work}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- <div class="card"> 
+    <h5>Alternate Align</h5> 
+    <p-timeline align = "alternate" [value]="array"> 
+      <ng-template pTemplate="content" let-event>  
+        <p-card [header] = "event.org" [subheader] = "event.year">
+            <h3>{{event.org}}</h3>
+            <p>{{event.role}}</p>
+            <p>{{event.work}}</p>
+        </p-card>
+      </ng-template> 
+    </p-timeline> 
+  </div> -->

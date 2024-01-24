@@ -1,0 +1,43 @@
+<div>
+  <mat-toolbar>
+    <span>My Portfolio</span>
+    <ul class="side-by-side-list">
+      <li>
+        <a pageScroll class="nav-link smooth-scroll" href="#about">About</a>
+      </li>
+      <li>
+        <a pageScroll class="nav-link smooth-scroll" href="#education">Education</a>
+      </li>
+
+      <li>
+        <a class="nav-link smooth-scroll" href="#work-exp">Work Experience</a>
+      </li>
+
+      <li >
+        <a class="nav-link smooth-scroll" href="#projects">Projects</a>
+      </li>
+      <li >
+        <a class="nav-link smooth-scroll" href="#skill">Skills</a>
+      </li>
+
+      <li>
+        <a class="nav-link smooth-scroll" href="#reference">Resume</a>
+      </li>
+
+      <li>
+        <a class="nav-link smooth-scroll" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </mat-toolbar>
+  <div class="container">
+    <div class="cc-profile-image">
+      <a href="#">
+        <img src="../assets/image.jpeg" alt="Small Circle Image">
+      </a>
+    </div>
+  </div>  
+  <about id="about"></about>
+  <education id="education"></education>
+  <work-exp id="work-exp"></work-exp>
+  <router-outlet></router-outlet>
+</div>

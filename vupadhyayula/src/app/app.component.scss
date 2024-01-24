@@ -1,0 +1,81 @@
+.div{
+    background-color: #B0BEC5;
+}
+mat-toolbar {
+position: fixed;
+top: 0;
+  width: 100%;
+  z-index: 1000;
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+  }
+}
+/* Custom styling for the side-by-side list */
+.side-by-side-list {
+    display: flex;
+    list-style-type: none; /* Remove default list item bullets */
+    margin: 0; /* Remove default margin for the list */
+    padding: 0; /* Remove default padding for the list */
+  
+    /* Optional: Add some spacing between list items */
+li {
+      margin-right: 15px;
+    }
+  }
+/* Style for the container div with background image */
+.container {
+    background: url('../assets/images/SUNY-Bing-picture.jpg') center/cover fixed; 
+    position: relative;
+    width: 100vw; /* 100% of the viewport width */
+    height: 600px;/* Set background image */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+.cc-profile-image a {
+    position: relative;
+  }
+  
+  .cc-profile-image a:before {
+    content: "relative";
+    border: 15px solid rgba(55, 140, 63, 0.6);
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: relative;
+    left: 0;
+    -webkit-animation: pulsate 1.6s ease-out;
+            animation: pulsate 1.6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    opacity: 0.0;
+    z-index: 99;
+  }
+  
+  .cc-profile-image img {
+    background: fixed;
+    position: relative;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    border: 15px solid transparent;
+    z-index: 9999;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+  
+  .cc-profile-image a:hover img {
+    -webkit-transform: scale(1.06, 1.06);
+            transform: scale(1.06, 1.06);
+  }
+  
+  .cc-profile-image a:hover:before {
+    -webkit-animation: none;
+            animation: none;
+  }
+  
+  
