@@ -1,0 +1,14 @@
+.projects{
+    display:flex;
+    justify-content: space-between;
+   }
+mat-card
+{
+   width: 30%;
+}
+.tab-cards
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

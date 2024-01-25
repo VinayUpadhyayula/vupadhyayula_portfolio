@@ -1,7 +1,9 @@
 <div>
   <mat-toolbar>
-    <span>My Portfolio</span>
     <ul class="side-by-side-list">
+      <li>
+        <a href="#">Vinay Upadhyayula</a>
+      </li>
       <li>
         <a pageScroll class="nav-link smooth-scroll" href="#about">About</a>
       </li>
@@ -10,22 +12,22 @@
       </li>
 
       <li>
-        <a class="nav-link smooth-scroll" href="#work-exp">Work Experience</a>
+        <a pageScroll class="nav-link smooth-scroll" href="#work-exp">Work Experience</a>
       </li>
 
       <li >
-        <a class="nav-link smooth-scroll" href="#projects">Projects</a>
+        <a pageScroll class="nav-link smooth-scroll" href="#projects">Projects</a>
       </li>
       <li >
-        <a class="nav-link smooth-scroll" href="#skill">Skills</a>
+        <a pageScroll class="nav-link smooth-scroll" href="#skills">Skills</a>
       </li>
 
       <li>
-        <a class="nav-link smooth-scroll" href="#reference">Resume</a>
+        <a pageScroll class="nav-link smooth-scroll" href="#reference">Resume</a>
       </li>
 
       <li>
-        <a class="nav-link smooth-scroll" href="#contact">Contact</a>
+        <a pageScroll class="nav-link smooth-scroll" href="#contact">Contact</a>
       </li>
     </ul>
   </mat-toolbar>
@@ -34,10 +36,15 @@
       <a href="#">
         <img src="../assets/image.jpeg" alt="Small Circle Image">
       </a>
+      <h3 style="color:white">Venkata Sri Sai Surya Vinay Upadhyayula</h3>
     </div>
   </div>  
-  <about id="about"></about>
+  <div class="profile-comp">
+    <about id="about"></about>
   <education id="education"></education>
   <work-exp id="work-exp"></work-exp>
+  <skills id = "skills"></skills>
+  <projects id = "projects"></projects>
+  </div>
   <router-outlet></router-outlet>
 </div>

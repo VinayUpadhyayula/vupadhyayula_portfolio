@@ -1,3 +1,4 @@
+<h2>Work Experience</h2>
 <div class="timeline">
     <div *ngFor='let entry of array;let i = index'>
       <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
@@ -5,7 +6,9 @@
           <h2>{{entry.year}}</h2>
           <p>{{entry.org}}</p>
           <p>{{entry.role}}</p>
-          <p>{{entry.work}}</p>
+          <ul>
+            <li *ngFor="let work of entry.work | textsplit">{{work}}</li>
+          </ul>
         </div>
       </div>
     </div>
