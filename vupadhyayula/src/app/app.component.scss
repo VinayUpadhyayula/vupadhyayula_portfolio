@@ -26,16 +26,17 @@ li {
   }
 /* Style for the container div with background image */
 .container {
-    background: url('../assets/images/SUNY-Bing-picture.jpg') center/cover fixed; 
+    background: url('../assets/images/bing.jpg') center/cover fixed; 
     position: relative;
     width: 100vw; /* 100% of the viewport width */
-    height: 600px;/* Set background image */
+    height: 580px;/* Set background image */
     display: flex;
   align-items: center;
   justify-content: center;
   }
 .cc-profile-image a {
     position: relative;
+    overflow: hidden;
   }
   
   .cc-profile-image a:before {
@@ -64,8 +65,9 @@ li {
     margin: 0;
     border: 15px solid transparent;
     z-index: 9999;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
+    // -webkit-transition: all .3s ease-out;
+    // transition: all .3s ease-out;
+    overflow: hidden;
   }
   
   .cc-profile-image a:hover img {
@@ -90,4 +92,14 @@ li {
     margin:5px;
     padding: 15px;
     justify-content: space-between;
+  }
+  .ruler
+  {
+    display: block;
+    width: 40%;
+    height: 50%;
+  }
+  .name
+  {
+    background-color:white;
   }
