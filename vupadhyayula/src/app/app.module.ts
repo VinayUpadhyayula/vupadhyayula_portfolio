@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
@@ -16,6 +17,9 @@ import { CardModule } from "primeng/card";
 import { Split } from './work-exp/split.pipe';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ResumeComponent } from './resume/resume.component';
+import {MatIconRegistry, MatIconModule} from '@angular/material/icon';
+import { OtherComponent } from './other/other.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { ProjectsComponent } from './projects/projects.component';
     WorkExpComponent,
     Split,
     SkillsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ResumeComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { ProjectsComponent } from './projects/projects.component';
     NgxPageScrollModule,
     TimelineModule,
     CardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatExpansionModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
