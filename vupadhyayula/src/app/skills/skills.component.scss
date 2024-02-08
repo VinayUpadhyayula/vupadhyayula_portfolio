@@ -8,3 +8,26 @@ mat-card
     margin:5px;
     padding: 15px;
 }
+.skill-icons
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+    
+}
+.skillsGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+    gap: 50px;
+    grid-auto-rows: auto;
+    height: auto;
+    img
+    {
+        width: 100px;
+        height:100px;
+    }
+  }
