@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
@@ -9,13 +9,27 @@ import { MatIconRegistry } from '@angular/material/icon';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'vupadhyayula';
-  constructor(private matIconRegistry:MatIconRegistry)
-  {
-    this.matIconRegistry.addSvgIcon("linkedin", "assets/images/linkedin.svg");
-    this.matIconRegistry.addSvgIcon("gmail", "assets/images/gmail.svg");
-    this.matIconRegistry.addSvgIcon("github", "assets/images/github.svg");
+  opacity: number = 0;
+
+  ngOnInit(): void {
+    const checkpoint = 250;
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll <= checkpoint) {
+        this.opacity = 1 - currentScroll / checkpoint;
+      } else {
+        this.opacity = 0;
+      }
+
+      const name_element = <HTMLElement>document.querySelector('.name');
+      const image_element = <HTMLElement>document.querySelector('.profile-pic');
+      const ruler_element = <HTMLElement>document.querySelector('.ruler');
+      name_element.style.opacity = String(this.opacity);
+      image_element.style.opacity = String(this.opacity);
+      ruler_element.style.opacity = String(this.opacity);
+    });
   }
   // containerTop = 0;
 

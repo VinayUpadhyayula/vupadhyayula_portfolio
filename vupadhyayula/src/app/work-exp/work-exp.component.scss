@@ -121,3 +121,22 @@
     left: 0%;
     }
   }
+  .work-exp{
+    display:flex;
+    justify-content: space-between;
+   }
+mat-card
+{
+   width: 30%;
+   box-shadow: inset;
+    margin:5px;
+    padding: 15px;
+   
+}
+.tab-cards
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: inset;
+}

@@ -39,6 +39,10 @@ li {
     overflow: hidden;
   }
   
+.toolbar {
+  z-index: 100 !important;
+}
+
   .cc-profile-image a:before {
     content: "relative";
     border: 15px solid rgba(55, 140, 63, 0.6);
