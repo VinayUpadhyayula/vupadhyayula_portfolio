@@ -1,120 +1,132 @@
 <div>
     <h2>Projects</h2>
 </div>
-<div class="projects">
+<div>
     <mat-tab-group fitInkBarToContent>
         <mat-tab label = "1">
         <div class = "tab-cards">
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>APEX Instruction Pipeline Simulator</mat-card-title>
-                    <mat-card-subtitle>Computer Architecture</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="assets/images/cao.png" alt="Out of order processor">
-                <mat-card-content>
-                    <ul>
-                        <li>
-                            Developed and simulated a 5 stage APEX Instruction Pipeline using C whose design correlates to the real-world on chip in -order processor. The design included all the arithmetic, logical operations and handled branching instructions.
-                        </li>
-                        <li>
-                            Extended the APEX pipeline into a out-of-order processor design which reduced pipeline latency thereby increasing processor performance. It also included speculative execution.
-                        </li>
-                    </ul>
-                </mat-card-content>
-            </mat-card>
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Spreadsheet developement</mat-card-title>
-                    <mat-card-subtitle>Programming for the Web</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="assets/images/view.png" alt="Out of order processor">
-                <mat-card-content>
-                    <ul>
-                        <li>
-                        Implemented complete Spreadsheet interface from scratch using <b>ReactJS, Mongo DB, Typescript</b>  
-                        </li>
-                        <li>
-                            Achieved data retrieval using web API service based architecture
-                        </li>
-                    </ul>
-                </mat-card-content>
-                
-            </mat-card>
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Black Friday Sales Prediction Analysis</mat-card-title>
-                    <mat-card-subtitle>Machine Learning</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="assets/images/sales_prediction.jpeg" alt="Out of order processor">
-                <mat-card-content>
-                    <ul>
-                        <li>
-                            Performed exploratory data analysis and used various Regression algorithms to predict the amount in a retail store based on historical sales transactions
-                        </li>
-                        <li>
-                            Used Numpy, sckitlearn & Pandas for data pre processing, model training and plotting
-                        </li>
-                    </ul>
-                </mat-card-content>
-            </mat-card>
+            <div class="tab-card">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>APEX Instruction Pipeline Simulator</mat-card-title>
+                        <mat-card-subtitle>Computer Architecture</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/images/cao.png" alt="Out of order processor">
+                    <mat-card-content>
+                        <ul>
+                            <li>
+                                Developed and simulated a 5 stage APEX Instruction Pipeline using C whose design correlates to the real-world on chip in -order processor. The design included all the arithmetic, logical operations and handled branching instructions.
+                            </li>
+                            <li>
+                                Extended the APEX pipeline into a out-of-order processor design which reduced pipeline latency thereby increasing processor performance. It also included speculative execution.
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="tab-card">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Spreadsheet developement</mat-card-title>
+                        <mat-card-subtitle>Programming for the Web</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/images/view.png" alt="Out of order processor">
+                    <mat-card-content>
+                        <ul>
+                            <li>
+                            Implemented complete Spreadsheet interface from scratch using <b>ReactJS, Mongo DB, Typescript</b>  
+                            </li>
+                            <li>
+                                Achieved data retrieval using web API service based architecture
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                    
+                </mat-card>
+            </div>
+            <div class="tab-card">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Black Friday Sales Prediction Analysis</mat-card-title>
+                        <mat-card-subtitle>Machine Learning</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/images/sales_prediction.jpeg" alt="Out of order processor">
+                    <mat-card-content>
+                        <ul>
+                            <li>
+                                Performed exploratory data analysis and used various Regression algorithms to predict the amount in a retail store based on historical sales transactions
+                            </li>
+                            <li>
+                                Used Numpy, sckitlearn & Pandas for data pre processing, model training and plotting
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+            </div>
         </div>    
     </mat-tab>
         <mat-tab label = "2">
             <div class = "tab-cards">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>Retail Business Management System</mat-card-title>
-                        <mat-card-subtitle>Java JDBC, MySQL, PL/SQL</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/images/jdbc.jpeg" alt="Out of order processor">
-                    <mat-card-content>
-                        <ul>
-                            <li>
-                            Developed a command - line menu imnterface based retail management system that performed various actions as per user input.
-                            </li>
-                            <li>
-                                Incorporated various sql and pl/sql functionalities such as triggers, procedures, packages and sequenes to commit and perform various database transcations
-                            </li>
-                        </ul>
-                    </mat-card-content>
-                    
-                </mat-card>
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>Recursive Descent Parser</mat-card-title>
-                        <mat-card-subtitle>Java</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/images/compiler.avif" alt="Out of order processor">
-                    <mat-card-content>
-                        <ul>
-                            <li>
-                                Designed and simulated a recursive decent parser using Java as part of programming languages course project 
-                            </li>
-                            <li>
-                                Implemented a scanner(tokenizer) and extended it to build an abstract syntax tree
-                            </li>
-                        </ul>
-                    </mat-card-content>
-                    
-                </mat-card>
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>ATM - Bank model</mat-card-title>
-                        <mat-card-subtitle>Computer Security, Java</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/images/aes.avif" alt="Out of order processor">
-                    <mat-card-content>
-                        <ul>
-                            <li>
-                              Implemeted a server(Bank) and multiple clients(ATM's) mdoel using AES/RSA cipher techniques using Java
-                            </li>
-                            <li>
-                                Generated public and private keys for RSA encryption and decryption
-                            </li>
-                        </ul>
-                    </mat-card-content>
-                    
-                </mat-card>
+                <div class = "tab-card">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>Retail Business Management System</mat-card-title>
+                            <mat-card-subtitle>Java JDBC, MySQL, PL/SQL</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="assets/images/jdbc.jpeg" alt="Out of order processor">
+                        <mat-card-content>
+                            <ul>
+                                <li>
+                                Developed a command - line menu imnterface based retail management system that performed various actions as per user input.
+                                </li>
+                                <li>
+                                    Incorporated various sql and pl/sql functionalities such as triggers, procedures, packages and sequenes to commit and perform various database transcations
+                                </li>
+                            </ul>
+                        </mat-card-content>
+                        
+                    </mat-card>
+                </div>
+                <div class="tab-card">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>Recursive Descent Parser</mat-card-title>
+                            <mat-card-subtitle>Java</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="assets/images/compiler.avif" alt="Out of order processor">
+                        <mat-card-content>
+                            <ul>
+                                <li>
+                                    Designed and simulated a recursive decent parser using Java as part of programming languages course project 
+                                </li>
+                                <li>
+                                    Implemented a scanner(tokenizer) and extended it to build an abstract syntax tree
+                                </li>
+                            </ul>
+                        </mat-card-content>
+                        
+                    </mat-card>
+                </div>
+                <div class="tab-card">
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>ATM - Bank model</mat-card-title>
+                            <mat-card-subtitle>Computer Security, Java</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="assets/images/aes.avif" alt="Out of order processor">
+                        <mat-card-content>
+                            <ul>
+                                <li>
+                                  Implemeted a server(Bank) and multiple clients(ATM's) mdoel using AES/RSA cipher techniques using Java
+                                </li>
+                                <li>
+                                    Generated public and private keys for RSA encryption and decryption
+                                </li>
+                            </ul>
+                        </mat-card-content>
+                        
+                    </mat-card>
+                </div>
             </div>    
             </mat-tab>
     </mat-tab-group>

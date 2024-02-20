@@ -1,6 +1,7 @@
 <div>
   <mat-toolbar class="toolbar">
-    <ul class="side-by-side-list">
+    <div class ="list">
+    <!-- <ul class="side-by-side-list"> -->
       <li>
         <a href="#">Vinay Upadhyayula</a>
       </li>
@@ -32,7 +33,8 @@
       <li>
         <a pageScroll class="nav-link smooth-scroll" href="#other">Other</a>
       </li>
-    </ul>
+    <!-- </ul> -->
+  </div>
   </mat-toolbar>
   <div class="container">
     <div class="cc-profile-image">
@@ -41,16 +43,13 @@
       </a>
       <h2 class = "name">Venkata Sri Sai Surya Vinay Upadhyayula</h2>
       <hr class = "ruler">
+      <div class ="icons">
+        <a href = "https://www.github.com/vupadhyayula8/" target="_blank"><img src="assets/images/git.svg"/></a>
+        <a href = "https://www.linkedin.com/in/vupadhyayula8/" target="_blank"><img  src="assets/images/linkedin.svg"/></a>
+        <a href="mailto: vupadhyayula@binghamton.edu" target="_blank"><img src="assets/images/gmail.svg"/></a>
+      </div>
     </div>
-  </div>
-  <div>
-    <a href="" title="Github">
-      <!-- <mat-icon svgIcon = "github"></mat-icon> -->
-    </a>
-    <a href="https://www.linkedin.com/in/vupadhyayula8/" title="Connect via Linkedin">
-      <!-- <mat-icon svgIcon = "linkedin"></mat-icon> -->
-    </a>
-  </div>  
+  </div> 
   <div class="profile-comp">
     <about id="about"></about>
   <education id="education"></education>
@@ -60,7 +59,10 @@
   <resume id = "resume"></resume>
   <other id = "other"></other>
   <h3 id= "contact" class = "contact">Please feel free to contact me at vupadhyayula@binghamton.edu</h3>
-  <hr>
+  
   </div>
   <router-outlet></router-outlet>
+</div>
+<div class = "end-of-page">
+  <hr>
 </div>

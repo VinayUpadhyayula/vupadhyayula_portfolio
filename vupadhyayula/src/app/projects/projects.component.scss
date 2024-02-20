@@ -1,15 +1,27 @@
-.projects{
-    display:flex;
-    justify-content: space-between;
-   }
 mat-card
 {
-   width: 30%;
+   box-shadow: inset;
+   margin:5px;
+   padding: 15px;
 }
 .tab-cards
 {
     display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: inset;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    //flex: 400px;
+    
 }
+.tab-card {
+    width: 25%;
+    flex:400px;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:red;
+    background-color: rgb(243, 243, 234);
+    }
+    
+::ng-deep .mat-tab-list .mat-tab-labels {
+    color:blue;
+    background-color: rgb(255, 255, 255);
+    }

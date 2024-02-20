@@ -1,33 +1,22 @@
-.skills{
- display:flex;
- justify-content: space-between;
-}
+
 mat-card
 {
     box-shadow: inset;
     margin:5px;
     padding: 15px;
 }
-.skill-icons
-{
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-    
-}
 .skillsGrid{
-    display: grid;
-    grid-template-columns: repeat(5, 5fr);
-    gap: 50px;
-    grid-auto-rows: auto;
-    height: auto;
-    img
-    {
-        width: 100px;
-        height:100px;
-    }
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+  }
+  .font
+  {
+    font-family: palatino;
+  }
+  .skill
+  {
+    padding: 1.25rem;
+    height: 100px;
   }

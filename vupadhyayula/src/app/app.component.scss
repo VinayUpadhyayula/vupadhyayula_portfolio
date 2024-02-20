@@ -6,24 +6,28 @@ position: fixed;
 top: 0;
   width: 100%;
   z-index: 1000;
-
+.list{
+  display: flex;
+  flex-wrap: wrap;
 a {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color */
   }
 }
+}
 /* Custom styling for the side-by-side list */
 .side-by-side-list {
     display: flex;
-    list-style-type: none; /* Remove default list item bullets */
-    margin: 0; /* Remove default margin for the list */
-    padding: 0; /* Remove default padding for the list */
-  
+   /* Remove default padding for the list */
+}
     /* Optional: Add some spacing between list items */
 li {
+  list-style-type: none; /* Remove default list item bullets */
+  margin: 0; /* Remove default margin for the list */
+  padding: 0rem; 
       margin-right: 15px;
     }
-  }
+  
 /* Style for the container div with background image */
 .container {
     background: url('../assets/images/bing.jpg') center/cover fixed; 
@@ -105,6 +109,8 @@ li {
   }
   .name
   {
+    // filter: invert(1);
+    // mix-blend-mode: difference;
     background-color:white;
     font-family: monospace;
     padding: 3px;
@@ -113,4 +119,27 @@ li {
   {
     padding:10px;
     background-color:lightblue;
+  }
+  .end-of-page
+  {
+    justify-content: center;
+    // width: 100%;
+    padding: 10px;
+  }
+
+  .git-icon {
+    
+    flex-wrap: wrap;
+    right: 2em;
+    position: fixed;
+  }
+  .icons 
+  {
+    display: flex;
+    flex-wrap: wrap;
+    img 
+    {
+    height: 45px;
+    width: 45px;
+    }
   }
