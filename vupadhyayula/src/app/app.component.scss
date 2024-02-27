@@ -118,7 +118,9 @@ li {
   .contact
   {
     padding:10px;
-    background-color:lightblue;
+    text-align: center;
+    background:#393f4d;
+    color: whitesmoke
   }
   .end-of-page
   {
@@ -137,9 +139,13 @@ li {
   {
     display: flex;
     flex-wrap: wrap;
-    img 
+    .social 
+    {
+      flex:400px;
+      img 
     {
     height: 45px;
     width: 45px;
+    }
     }
   }
