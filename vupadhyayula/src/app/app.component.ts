@@ -31,6 +31,10 @@ export class AppComponent implements OnInit {
       ruler_element.style.opacity = String(this.opacity);
     });
   }
+  displayResume()
+  {
+    window.open("assets/Resume.pdf","_blank");
+  }
   // containerTop = 0;
 
   // @HostListener('window:scroll', [])

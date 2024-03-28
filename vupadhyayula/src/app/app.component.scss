@@ -116,8 +116,8 @@ li {
     text-align: center;
     position: relative;
     top: 50%;
-    left: 50%;
-    transform: translate(-45%, 5%);
+    // left: 50%;
+    // transform: translate(-45%, 5%);
     color: black;
     //font-size: 4.5rem;
     padding: 3px;
@@ -165,7 +165,7 @@ li {
   background: #146621;
   opacity: 80%;
   position: absolute;
-  top: 50%;
+  top: 80%;
   //border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
