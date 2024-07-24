@@ -1,81 +1,77 @@
 <div>
-  <mat-toolbar class="toolbar">
-    <div class ="list">
-    <!-- <ul class="side-by-side-list"> -->
-      <li>
+  <mat-toolbar color="primary" class="toolbar">
+    <div class="list" fxLayout="row" fxLayoutAlign="space-between center">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="left">
         <a href="#">Vinay Upadhyayula</a>
-      </li>
-      <li>
+      </div>
+      <div class="right" fxHide fxShow.gt-sm>
         <a pageScroll class="nav-link smooth-scroll" href="#about">About</a>
-      </li>
-      <li>
         <a pageScroll class="nav-link smooth-scroll" href="#education">Education</a>
-      </li>
-
-      <li>
         <a pageScroll class="nav-link smooth-scroll" href="#work-exp">Work Experience</a>
-      </li>
-
-      <li >
         <a pageScroll class="nav-link smooth-scroll" href="#projects">Projects</a>
-      </li>
-      <li >
         <a pageScroll class="nav-link smooth-scroll" href="#skills">Skills</a>
-      </li>
-
-      <!-- <li>
-        <a pageScroll class="nav-link smooth-scroll" href="#resume">Resume</a>
-      </li> -->
-
-      <li>
         <a pageScroll class="nav-link smooth-scroll" href="#contact">Contact</a>
-      </li>
-      <li>
         <a pageScroll class="nav-link smooth-scroll" href="#other">Other</a>
-      </li>
-    <!-- </ul> -->
-  </div>
-  </mat-toolbar>
-  <div class="container">
-    <div class="cc-profile-image">
-      <a href="#">
-        <img src="assets/image.jpeg" alt="Small Circle Image" class="profile-pic">
-      </a>
-      <div style="justify-content: center;">
-      <h2 class = "name">Venkata Sri Sai Surya Vinay Upadhyayula</h2>
-      <hr class = "ruler">
-    </div>
-      <div class = "resume-div">
-        <!-- <a href = "assets/Resume.pdf" target="_blank"><button class = "resume">View Resume</button></a> -->
-        <button class = "resume" (click)= displayResume()>View Resume</button>
       </div>
     </div>
-  </div> 
-  <div class="profile-comp">
-    <about id="about"></about>
-  <education id="education"></education>
-  <work-exp id="work-exp"></work-exp>
-  <skills id = "skills"></skills>
-  <projects id = "projects"></projects>
-  <!-- <resume id = "resume"></resume> -->
-  <other id = "other"></other>
-  <div id= "contact" class = "contact">
-  <footer>
-  <h3>Please feel free to get in touch via email at vupadhyayula@binghamton.edu</h3>
-  <span>&copy; Copyright 2024 | Vinay Upadhyayula | All Rights Reserved</span>
-  <div class ="icons">
-    <div class = "social">
-      <a href = "https://github.com/VinayUpadhyayula" target="_blank"><img src="assets/images/git.svg"/></a>
-      <a href = "https://www.linkedin.com/in/vupadhyayula8/" target="_blank"><img  src="assets/images/linkedin.svg"/></a>
-      <a href="mailto: vupadhyayula@binghamton.edu" target="_blank"><img src="assets/images/gmail.svg"/></a>
-    </div>
-  </div>
-  </footer>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav fxLayout="column" mode="side" opened="false" fxHide.gt-sm>
+      <span></span>
+      <a mat-button (click)="closeSideNav(sidenav)"pageScroll href="#about">About</a>
+      <a mat-button pageScroll href="#education">Education</a>
+      <a mat-button pageScroll href="#work-exp">Work Experience</a>
+      <a mat-button pageScroll href="#projects">Projects</a>
+      <a mat-button pageScroll href="#skills">Skills</a>
+      <a mat-button pageScroll href="#contact">Contact</a>
+      <a mat-button pageScroll href="#other">Other</a>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <div class="container">
+        <div class="cc-profile-image">
+          <a href="#">
+            <img src="assets/image.jpeg" alt="Small Circle Image" class="profile-pic">
+          </a>
+          <div style="justify-content: center;">
+            <h2 class="name">Venkata Sri Sai Surya Vinay Upadhyayula</h2>
+            <hr class="ruler">
+          </div>
+          <div class="resume-div">
+            <button class="resume" (click)=displayResume()>View Resume</button>
+          </div>
+        </div>
+      </div>
+      <div class="profile-comp">
+        <about id="about"></about>
+        <education id="education"></education>
+        <work-exp id="work-exp"></work-exp>
+        <skills id="skills"></skills>
+        <projects id="projects"></projects>
+        <other id="other"></other>
+        <div id="contact" class="contact">
+          <footer>
+            <h3>Please feel free to get in touch via email at vupadhyayula@binghamton.edu</h3>
+            <span>&copy; Copyright 2024 | Vinay Upadhyayula | All Rights Reserved</span>
+            <div class="icons">
+              <div class="social">
+                <a href="https://github.com/VinayUpadhyayula" target="_blank"><img src="assets/images/git.svg" /></a>
+                <a href="https://www.linkedin.com/in/vupadhyayula8/" target="_blank"><img
+                    src="assets/images/linkedin.svg" /></a>
+                <a href="mailto: vupadhyayula@binghamton.edu" target="_blank"><img src="assets/images/gmail.svg" /></a>
+              </div>
+            </div>
+          </footer>
+        </div>
+    
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>  
+
 </div>
-  
-  </div>
-  <router-outlet></router-outlet>
-</div>
-<div class = "end-of-page">
+<div class="end-of-page">
   <hr>
 </div>

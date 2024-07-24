@@ -1,8 +1,9 @@
-import { Component, HostListener, OnInit} from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { MatIconRegistry } from '@angular/material/icon';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,11 @@ export class AppComponent implements OnInit {
   {
     window.open("assets/Resume.pdf","_blank");
   }
+  closeSideNav(sidenav:any)
+  {
+    sidenav.close();
+  }
+  
   // containerTop = 0;
 
   // @HostListener('window:scroll', [])

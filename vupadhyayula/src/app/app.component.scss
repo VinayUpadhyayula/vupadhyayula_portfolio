@@ -1,19 +1,57 @@
 .div{
     background-color: #B0BEC5;
 }
-mat-toolbar {
-position: fixed;
-top: 0;
+.toolbar {
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
-.list{
-  display: flex;
-  flex-wrap: wrap;
-a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-  }
 }
+
+.list {
+  display: flex;
+  width: 100%;
+  align-items: center; /* Center items vertically */
+}
+
+.left {
+  flex: 0 1 auto; /* Allow the left item to take only the space it needs */
+}
+.left a{
+  text-decoration: none;
+  color: inherit; /* Allow the left item to take only the space it needs */
+}
+
+.spacer {
+  flex: 1 1 auto; /* Take up remaining space */
+}
+
+.right a {
+  margin-left: 10px; /* Add space between right items */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  padding: 8px 12px; /* Add some padding for better click area */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.right a:hover {
+  background-color: rgba(203, 182, 182, 0.1); /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+mat-sidenav {
+  padding-top: 64px;
+}
+mat-sidenav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+mat-sidenav a:hover {
+  background-color: #f0f0f0;
+  color: #000;
 }
 /* Custom styling for the side-by-side list */
 .side-by-side-list {
@@ -210,4 +248,8 @@ li {
   text-align: center;
   top: 50%;
   left: 50%;
+}
+.space
+{
+  flex: 1 1 auto;
 }

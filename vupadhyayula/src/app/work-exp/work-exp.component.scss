@@ -135,6 +135,7 @@ mat-card
 .tab-cards
 {
     display:flex;
+    align-items: stretch;
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: inset;
@@ -142,4 +143,5 @@ mat-card
 .tab-card {
   //width: 25%;
   flex:400px;
+  flex: 1 1 calc(33.333% - 20px);
 }
