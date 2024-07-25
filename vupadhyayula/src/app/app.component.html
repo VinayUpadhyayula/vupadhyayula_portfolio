@@ -22,12 +22,12 @@
     <mat-sidenav #sidenav fxLayout="column" mode="side" opened="false" fxHide.gt-sm>
       <span></span>
       <a mat-button (click)="closeSideNav(sidenav)"pageScroll href="#about">About</a>
-      <a mat-button pageScroll href="#education">Education</a>
-      <a mat-button pageScroll href="#work-exp">Work Experience</a>
-      <a mat-button pageScroll href="#projects">Projects</a>
-      <a mat-button pageScroll href="#skills">Skills</a>
-      <a mat-button pageScroll href="#contact">Contact</a>
-      <a mat-button pageScroll href="#other">Other</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#education">Education</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#work-exp">Work Experience</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#projects">Projects</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#skills">Skills</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#contact">Contact</a>
+      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#other">Other</a>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
       <div class="container">
