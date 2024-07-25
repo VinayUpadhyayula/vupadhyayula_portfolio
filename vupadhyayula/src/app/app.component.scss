@@ -35,6 +35,7 @@
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
 }
 
+
 .right a:hover {
   background-color: rgba(203, 182, 182, 0.1); /* Change background color on hover */
   color: #fff; /* Change text color on hover */
@@ -53,18 +54,11 @@ mat-sidenav a:hover {
   background-color: #f0f0f0;
   color: #000;
 }
-/* Custom styling for the side-by-side list */
+
 .side-by-side-list {
     display: flex;
-   /* Remove default padding for the list */
+
 }
-    /* Optional: Add some spacing between list items */
-li {
-  list-style-type: none; /* Remove default list item bullets */
-  margin: 0; /* Remove default margin for the list */
-  padding: 0rem; 
-      margin-right: 15px;
-    }
   
 /* Style for the container div with background image */
 .container {
@@ -108,9 +102,10 @@ li {
     height: 180px;
     width: 180px;
     padding: 0;
-    margin: 0;
+    margin: 10;
     border: 15px solid transparent;
     z-index: 9999;
+    margin-left: auto;
     // -webkit-transition: all .3s ease-out;
     // transition: all .3s ease-out;
     overflow: hidden;
@@ -145,20 +140,45 @@ li {
     width: 40%;
     height: 50%;
   }
-  .name
-  {
-    // filter: invert(1);
-    // mix-blend-mode: difference;
-    background-color:white;
-    font-family: monospace;
+  // .name
+  // {
+  //   // filter: invert(1);
+  //   // mix-blend-mode: difference;
+  //   // background-color:white;
+  //   background-color: rgba(0, 0, 0, 0.7);
+  //   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  //   font-family: monospace;
+  //   text-align: center;
+  //   position: relative;
+  //   top: 50%;
+  //   // left: 50%;
+  //   // transform: translate(-45%, 5%);
+  //   color: white;
+  //   //font-size: 4.5rem;
+  //   padding: 3px;
+  // }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+  .name {
     position: relative;
-    top: 50%;
-    // left: 50%;
-    // transform: translate(-45%, 5%);
-    color: black;
-    //font-size: 4.5rem;
-    padding: 3px;
+    padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1.8rem;
+    color: #fff; /* Ensures the text is visible */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)); /* Smooth gradient background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to the text for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow for a sleek look */
+    transition: all 0.3s ease; /* Smooth transition for any state changes */
+  }
+  
+  .name:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Slightly darker gradient on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
   }
   .contact
   {
@@ -197,34 +217,23 @@ li {
   }
 
 
-/* CSS */
-.resume {
-  appearance: button;
-  background: #146621;
-  opacity: 80%;
-  position: absolute;
-  top: 80%;
-  //border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  width: max-content;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  // font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  outline: none;
-  padding:10px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+
+
+  .resume {
+    appearance: button;
+    background: #146621;
+    opacity: 80%;
+    border-radius: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
 
 .resume:disabled {
   pointer-events: none;
@@ -240,14 +249,9 @@ li {
   transform: translateY(0);
 }
 .resume-div{
-  max-width: 300px;
-  align-items: center;
   justify-content: center;
-  display: block;
-  margin: 0;
-  text-align: center;
-  top: 50%;
-  left: 50%;
+  display: flex;
+  margin-top: 1rem;
 }
 .space
 {
