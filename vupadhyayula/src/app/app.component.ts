@@ -4,7 +4,6 @@ import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
-import Typewriter from 't-writer.js'
 
 @Component({
   selector: 'app-root',
