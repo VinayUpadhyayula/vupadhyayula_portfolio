@@ -1,27 +1,109 @@
-mat-card
-{
-   box-shadow: inset;
-   margin:5px;
-   padding: 15px;
-}
-.tab-cards
-{
-    display:flex;
+.projects-section {
+    padding: 2vmin; /* Scales padding with viewport */
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Scales font size between 1.5rem and 2rem based on viewport width */
+    margin-bottom: 2vmin;
+    color: #333;
+  }
+  
+  .tab-cards {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    //flex: 400px;
-    
-}
-.tab-card {
-    width: 25%;
-    flex:400px;
-}
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    color:red;
+    justify-content: center;
+    gap: 2vmin; /* Scales spacing between cards with viewport */
+  }
+  
+  .tab-card {
+    flex: 1 1 clamp(250px, 30vw, 350px); /* Cards scale between 250px and 350px based on viewport width */
+    min-width: 250px; /* Ensures cards don’t shrink too much */
+    max-width: 350px; /* Prevents cards from becoming too wide */
+  }
+  
+  mat-card {
+    box-shadow: 0 0.4vmin 0.8vmin rgba(0, 0, 0, 0.1); /* Scales shadow with viewport */
+    margin: 1vmin;
+    padding: 1.5vmin;
+    border-radius: 0.8vmin;
+    height: 100%; /* Ensures all cards in a row are the same height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-card-header {
+    text-align: left;
+  }
+  
+  mat-card-title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Scales title font size */
+    font-weight: 600;
+    color: #333;
+  }
+  
+  mat-card-subtitle {
+    font-size: clamp(0.8rem, 2vw, 0.9rem); /* Scales subtitle font size */
+    color: #666;
+  }
+  
+  img[mat-card-image] {
+    width: 100%; /* Image takes full width of the card */
+    aspect-ratio: 16 / 9; /* Maintains a consistent aspect ratio */
+    object-fit: cover; /* Ensures images scale properly without distortion */
+    border-radius: 0.4vmin;
+  }
+  
+  mat-card-content {
+    text-align: left;
+    flex-grow: 1; /* Ensures content takes up remaining space */
+  }
+  
+  mat-card-content ul {
+    padding-left: 2vmin;
+    margin: 0;
+  }
+  
+  mat-card-content li {
+    font-size: clamp(0.85rem, 2vw, 0.95rem); /* Scales list item font size */
+    color: #444;
+    margin-bottom: 0.8vmin;
+  }
+  
+  /* Optional: Keep your tab styling */
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: red;
     background-color: rgb(243, 243, 234);
-    }
-    
-::ng-deep .mat-tab-list .mat-tab-labels {
-    color:blue;
+  }
+  
+  ::ng-deep .mat-tab-list .mat-tab-labels {
+    color: blue;
     background-color: rgb(255, 255, 255);
-    }
+  }
+// mat-card
+// {
+//    box-shadow: inset;
+//    margin:5px;
+//    padding: 15px;
+// }
+// .tab-cards
+// {
+//     display:flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     //flex: 400px;
+    
+// }
+// .tab-card {
+//     width: 25%;
+//     flex:400px;
+// }
+// ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+//     color:red;
+//     background-color: rgb(243, 243, 234);
+//     }
+    
+// ::ng-deep .mat-tab-list .mat-tab-labels {
+//     color:blue;
+//     background-color: rgb(255, 255, 255);
+//     }

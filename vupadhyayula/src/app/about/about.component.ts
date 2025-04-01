@@ -22,6 +22,9 @@ export class AboutComponent implements OnInit{
   .then(writer2.start.bind(writer2))
   .start();
   writer2
+  .type("Consultant")
+  .rest(500)
+  .clear()
   .type("Software Engineer")
   .rest(500)
   .clear()
