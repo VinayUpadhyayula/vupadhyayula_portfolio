@@ -1,4 +1,4 @@
-#Personal portfolio website#. 
+# Personal portfolio website 
 Please feel free to visit https://vupadhyayula.vercel.app/vupadhyayula_portfolio/ to know more about me.
 
 >[!NOTE]
