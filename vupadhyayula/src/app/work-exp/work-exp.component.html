@@ -1,131 +1,29 @@
-<div>
-<h2>Work Experience</h2>
-</div>
-<div class = "work-exp">
-  <mat-tab-group fitInkBarToContent>
-  <mat-tab label = "Engineering Indx">
-    <div class = "tab-cards">
-      <div class = "tab-card">
-        <mat-card>
-          <mat-card-title>Technology Analyst</mat-card-title>
-          <mat-card-subtitle>Consultant, Developer</mat-card-subtitle>
-          <mat-card-content>
-            <ul>
-              <li>
-                Transforming Bayer's Crop protection manufacturing division using Industry Digital 4.0
-              </li>
-              <li>
-                Delivering high quality web applications built using Angular, C#, MySQL, Rabbit MQ
-              </li>
-              <li>
-                Leveraging Siemens Opcenter Execution Foundation event drivern command based architecture to integrate cross cutting technologies
-              </li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </div>
-  </mat-tab>
-    <mat-tab label = "Tata Consultancy Services">
-      <div class = "tab-cards">
-        <div class = "tab-card">
-          <mat-card>
-            <mat-card-title>Workforce Management Integration Layer™</mat-card-title>
-                <mat-card-subtitle>Apache Camel, XSLT, Angular, and Spring Boot</mat-card-subtitle>
-                <mat-card-content>
-                  <ul>
-                    <li>
-                      Engineered a full-stack Workforce Management application utilizing Apache Camel, XSLT, Angular, and Spring Boot
-                    </li>
-                    <li>
-                      Engaged actively in discussions with analysts and stakeholders, providing demonstrations from feature description through post-implementation testing phases that led to a 55% decrease in average handling time of a request
-                    </li>
-                  </ul>
-                </mat-card-content>
-          </mat-card>
+<div class="work-experience-section">
+  <h2>Work Experience</h2>
+  <div class="timeline">
+    <div class="timeline-entry" *ngFor="let company of workExperience; let i = index">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content" [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+        <div class="company-header">
+          <h3>{{ company.company }}</h3>
+          <div class="timeline-date">
+            <span>{{ company.timeSpan }}</span>
+          </div>
         </div>
-        <div class ="tab-card">
+        <div class="role" *ngFor="let role of company.roles">
           <mat-card>
-            <mat-card-title>National Directory Search™</mat-card-title>
-                <mat-card-subtitle>Angular, Spring Boot, Elasticsearch</mat-card-subtitle>
-                <mat-card-content>
-                  <ul>
-                    <li>
-                      Developed a Directory search portal project for a leading Belgium Client using Spring Batch Processing,Spring Boot, Angular,REST,Elasticsearch DB,Spring Cloud, Jenkins and Openshift container platform
-                    </li>
-                    <li>
-                      The application was transformed using new technology from legacy application which reduced 4.2 million euros cost for the client
-                    </li>
-                    <li>
-                      Use of new technology by the team was a risk. Enough POC was done by the team offline before proposing and implementing the solution.
-                    </li>
-                  </ul>
-                </mat-card-content>
-          </mat-card>
-        </div>
-        <div class="tab-card">
-          <mat-card>
-            <mat-card-title>Central Digital Communication Platform eXtension™ - Test Automation Integration</mat-card-title>
-                <mat-card-subtitle>Angular,Spring Boot, Selenium</mat-card-subtitle>
-                <mat-card-content>
-                  <ul>
-                    <li>
-                      Developed a UI functionality using Angular 10 and Node JS to integrate Web Service Automation Testing using Selenium and REST Framework in a Agile team of 15 members
-                    </li>
-                    <li>
-                      Devised and executed the functionality that significantly reduced manual testing overhead, resulting in substantial cost savings of over 40% for the client
-                    </li>
-                  </ul>
-                </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-    </mat-tab>
-    <mat-tab label = "Binghamton University">
-      <div class = "tab-cards">
-        <div class = "tab-card">
-          <mat-card>
-            <mat-card-title>Teaching Assistant</mat-card-title>
-            <mat-card-subtitle>Data Structues and Algorithms, C++</mat-card-subtitle>
+            <mat-card-header>
+              <mat-card-title>{{ role.title }}</mat-card-title>
+              <mat-card-subtitle>{{ role.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
             <mat-card-content>
               <ul>
-                <li>
-                  Gained expertise by contributing as a Teaching Assistant for Data Structures and Algorithms using C++
-                </li>
-                <li>
-                  Assisted in coursework, grading, conducting lab sessions and office hours every week for a class of over 60 students
-                </li>
+                <li *ngFor="let point of role.content">{{ point }}</li>
               </ul>
             </mat-card-content>
           </mat-card>
         </div>
       </div>
-    </mat-tab>
-  </mat-tab-group>
-</div>
-<!-- <div class="timeline">
-    <div *ngFor='let entry of array;let i = index'>
-      <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
-        <div class="content">
-          <h2>{{entry.year}}</h2>
-          <p>{{entry.org}}</p>
-          <p>{{entry.role}}</p>
-          <ul>
-            <li *ngFor="let work of entry.work | textsplit">{{work}}</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div> -->
-<!-- <div class="card"> 
-    <h5>Alternate Align</h5> 
-    <p-timeline align = "alternate" [value]="array"> 
-      <ng-template pTemplate="content" let-event>  
-        <p-card [header] = "event.org" [subheader] = "event.year">
-            <h3>{{event.org}}</h3>
-            <p>{{event.role}}</p>
-            <p>{{event.work}}</p>
-        </p-card>
-      </ng-template> 
-    </p-timeline> 
-  </div> -->
+  </div>
+</div>
