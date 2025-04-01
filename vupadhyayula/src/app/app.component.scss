@@ -1,6 +1,7 @@
-.div{
-    background-color: #B0BEC5;
+.div {
+  background-color: #B0BEC5;
 }
+
 .toolbar {
   position: fixed;
   top: 0;
@@ -11,43 +12,60 @@
 .list {
   display: flex;
   width: 100%;
-  align-items: center; /* Center items vertically */
+  align-items: center;
 }
 
 .left {
-  flex: 0 1 auto; /* Allow the left item to take only the space it needs */
-}
-.left a{
-  text-decoration: none;
-  color: inherit; /* Allow the left item to take only the space it needs */
+  flex: 0 1 auto;
 }
 
-.spacer {
-  flex: 1 1 auto; /* Take up remaining space */
+.left a {
+  text-decoration: none;
+  color: inherit;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .right a {
-  margin-left: 10px; /* Add space between right items */
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit text color */
-  padding: 8px 12px; /* Add some padding for better click area */
-  border-radius: 4px; /* Add border-radius for rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  margin-left: 10px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .right a:hover {
-  background-color: rgba(203, 182, 182, 0.1); /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: rgba(203, 182, 182, 0.1);
+  color: #fff;
 }
+
+/* Sidenav styles */
+mat-sidenav-container {
+  height: 100vh; /* Ensure the sidenav container takes the full viewport height */
+}
+
 mat-sidenav {
-  padding-top: 64px;
+  width: 70vw;
+  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 1vmin rgba(0, 0, 0, 0.2);
 }
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1vmin 0;
+  height: 100%; /* Ensure the content takes the full height of the sidenav */
+  overflow-y: auto; /* Allow scrolling within the sidenav */
+}
+
 mat-sidenav a {
   display: block;
   padding: 10px 20px;
   text-decoration: none;
   color: #333;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 mat-sidenav a:hover {
@@ -55,185 +73,143 @@ mat-sidenav a:hover {
   color: #000;
 }
 
-.side-by-side-list {
-    display: flex;
-
+/* Main content styles */
+mat-sidenav-content {
+  padding-top: 64px; /* Account for the fixed toolbar */
 }
-  
-/* Style for the container div with background image */
+
+/* Profile section container */
 .container {
-    background: url('../assets/images/bing.jpg') center/cover fixed; 
-    position: relative;
-    width: 100vw; /* 100% of the viewport width */
-    height: 580px;/* Set background image */
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-.cc-profile-image a {
-    position: relative;
-    overflow: hidden;
-  }
-  
-.toolbar {
-  z-index: 100 !important;
+  background: url('../assets/images/bing.jpg') center/cover fixed;
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Full viewport height for centering */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
-  .cc-profile-image a:before {
-    content: "relative";
-    border: 15px solid rgba(55, 140, 63, 0.6);
-    border-radius: 50%;
-    height: 180px;
-    width: 180px;
-    position: relative;
-    left: 0;
-    -webkit-animation: pulsate 1.6s ease-out;
-            animation: pulsate 1.6s ease-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    opacity: 0.0;
-    z-index: 99;
-  }
-  
-  .cc-profile-image img {
-    background: fixed;
-    position: relative;
-    border-radius: 50%;
-    height: 180px;
-    width: 180px;
-    padding: 0;
-    margin: 10;
-    border: 15px solid transparent;
-    z-index: 9999;
-    margin-left: auto;
-    // -webkit-transition: all .3s ease-out;
-    // transition: all .3s ease-out;
-    overflow: hidden;
-  }
-  
-  .cc-profile-image a:hover img {
-    -webkit-transform: scale(1.06, 1.06);
-            transform: scale(1.06, 1.06);
-  }
-  
-  .cc-profile-image a:hover:before {
-    -webkit-animation: none;
-            animation: none;
-  }
-  
-  .profile-comp {
-    margin: 0.8rem 1.5rem ;
-    border-radius: 1.5rem;
- 
+/* Profile image and content wrapper */
+.cc-profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+}
 
-  }
-  .mat-card
-  {
-    box-shadow: inset;
-    margin:5px;
-    padding: 15px;
-    justify-content: space-between;
-  }
-  .ruler
-  {
-    display: block;
-    width: 40%;
-    height: 50%;
-  }
-  // .name
-  // {
-  //   // filter: invert(1);
-  //   // mix-blend-mode: difference;
-  //   // background-color:white;
-  //   background-color: rgba(0, 0, 0, 0.7);
-  //   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  //   font-family: monospace;
-  //   text-align: center;
-  //   position: relative;
-  //   top: 50%;
-  //   // left: 50%;
-  //   // transform: translate(-45%, 5%);
-  //   color: white;
-  //   //font-size: 4.5rem;
-  //   padding: 3px;
-  // }
-  .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .name {
-    position: relative;
-    padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 1.8rem;
-    color: #fff; /* Ensures the text is visible */
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)); /* Smooth gradient background */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to the text for better visibility */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow for a sleek look */
-    transition: all 0.3s ease; /* Smooth transition for any state changes */
-  }
-  
-  .name:hover {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Slightly darker gradient on hover */
-    transform: translateY(-2px); /* Slight upward movement on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  }
-  .contact
-  {
-    padding:10px;
-    text-align: center;
-    background:#393f4d;
-    color: whitesmoke;
-    border-radius: 7px;
-  }
-  .end-of-page
-  {
-    justify-content: center;
-    padding: 10px;
-  }
+/* Profile image link */
+.cc-profile-image a {
+  display: block; /* Ensure the <a> tag behaves as a block for centering */
+}
 
-  .git-icon {
-    
-    flex-wrap: wrap;
-    right: 2em;
-    position: fixed;
-  }
-  .icons 
-  {
-    display: flex;
-    flex-wrap: wrap;
-    .social 
-    {
-      flex:400px;
-      img 
-    {
-    height: 45px;
-    width: 45px;
-    padding: 0.5em;
-    }
-    }
-  }
+/* Profile image */
+.cc-profile-image img {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  margin: 10px;
+  border: 15px solid transparent;
+}
 
+/* Profile container (name and ruler) */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center name and ruler horizontally */
+  text-align: center;
+}
 
+/* Name styling */
+.name {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
+.name:hover {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .resume {
-    appearance: button;
-    background: #146621;
-    opacity: 80%;
-    border-radius: 15px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
+/* Ruler styling */
+.ruler {
+  width: 40%;
+  margin: 10px 0; /* Add spacing above and below the ruler */
+  border: 0;
+  border-top: 2px solid #fff; /* White ruler for visibility on the background */
+}
+
+/* Profile components (sections like About, Education, etc.) */
+.profile-comp {
+  margin: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+/* Material card styling */
+.mat-card {
+  box-shadow: 0 0.4vmin 0.8vmin rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+/* Contact section */
+.contact {
+  padding: 10px;
+  text-align: center;
+  background: #393f4d;
+  color: whitesmoke;
+  border-radius: 7px;
+}
+
+/* End of page separator */
+.end-of-page {
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Social media icons container */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Social media icons */
+.social {
+  display: flex;
+  gap: 1vmin;
+}
+
+.social img {
+  height: 45px;
+  width: 45px;
+  padding: 0.5em;
+}
+
+/* Resume button */
+.resume {
+  appearance: button;
+  background: #146621;
+  opacity: 80%;
+  border-radius: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
 .resume:disabled {
   pointer-events: none;
@@ -248,12 +224,15 @@ mat-sidenav a:hover {
   box-shadow: none;
   transform: translateY(0);
 }
-.resume-div{
-  justify-content: center;
+
+/* Resume button container */
+.resume-div {
   display: flex;
+  justify-content: center; /* Center the button horizontally */
   margin-top: 1rem;
 }
-.space
-{
+
+/* Spacer for flex layouts */
+.space {
   flex: 1 1 auto;
 }

@@ -19,15 +19,16 @@
     </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill>
-    <mat-sidenav #sidenav fxLayout="column" mode="side" opened="false" fxHide.gt-sm>
-      <span></span>
-      <a mat-button (click)="closeSideNav(sidenav)"pageScroll href="#about">About</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#education">Education</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#work-exp">Work Experience</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#projects">Projects</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#skills">Skills</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#contact">Contact</a>
-      <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#other">Other</a>
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm (opened)="onSidenavOpen()">
+      <div class="sidenav-content">
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#about">About</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#education">Education</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#work-exp">Work Experience</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#projects">Projects</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#skills">Skills</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#contact">Contact</a>
+        <a mat-button (click)="closeSideNav(sidenav)" pageScroll href="#other">Other</a>
+      </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
       <div class="container">
@@ -35,12 +36,12 @@
           <a href="#">
             <img src="assets/image.jpeg" alt="Small Circle Image" class="profile-pic">
           </a>
-          <div class = "profile-container">
+          <div class="profile-container">
             <h2 class="name">Venkata Sri Sai Surya Vinay Upadhyayula</h2>
             <hr class="ruler">
           </div>
           <div class="resume-div">
-            <button class="resume" (click)=displayResume()>View Resume</button>
+            <button class="resume" (click)="displayResume()">View Resume</button>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@
         <div id="contact" class="contact">
           <footer>
             <h3>Please feel free to get in touch via email at vupadhyayula@binghamton.edu</h3>
-            <span>&copy; Copyright 2025 | Vinay Upadhyayula | All Rights Reserved</span>
+            <span>© Copyright 2025 | Vinay Upadhyayula | All Rights Reserved</span>
             <div class="icons">
               <div class="social">
                 <a href="https://github.com/VinayUpadhyayula" target="_blank"><img src="assets/images/git.svg" /></a>
@@ -65,12 +66,10 @@
             </div>
           </footer>
         </div>
-    
       </div>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
-  </mat-sidenav-container>  
-
+  </mat-sidenav-container>
 </div>
 <div class="end-of-page">
   <hr>

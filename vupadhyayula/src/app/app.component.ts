@@ -13,6 +13,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class AppComponent implements OnInit {
   title = 'vupadhyayula';
   opacity: number = 0;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
 
   ngOnInit(): void {
     const checkpoint = 250;
@@ -40,7 +41,14 @@ export class AppComponent implements OnInit {
   {
     sidenav.close();
   }
-  
+  onSidenavOpen() {
+    if (this.sidenav.opened) {
+      const sidenavContent = document.querySelector('.sidenav-content');
+      if (sidenavContent) {
+        sidenavContent.scrollTop = 0; // Scroll to the top of the sidenav content
+      }
+    }
+  }
   // containerTop = 0;
 
   // @HostListener('window:scroll', [])
